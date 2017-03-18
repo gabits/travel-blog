@@ -8,10 +8,14 @@
 <div>
     <h1><a href="">A Travel Blog</a></h1>
 </div>
+
+{% for post in posts %}
 <div>
-    <h6>published: 28-01-2017, 12:43</h6>
-    <h2><a href="">Post Title</a></h2>
-    <p>Lorem ipsum sit dolor amet</p>
+    <h6>published: {{ post.published_date }}</h6>
+    <h2><a href="">{{ post.title }}</a></h2>
+    <p>{{ post.text|linebreaksbr }}</p>
 </div>
+{% endfor %}
+
 </body>
 </html>
